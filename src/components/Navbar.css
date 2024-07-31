@@ -1,0 +1,109 @@
+.logo {
+    width: 130px;
+}
+
+.links {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.links:hover {
+    color: rgb(251, 184, 60);
+    transition: 0.3s;
+}
+
+.links:active {
+      color: rgb(251, 184, 60);
+}
+
+.middlelinks {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.menu {
+    display: none;
+    color: black;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    padding-right: 200px;
+    padding-left: 200px;
+    position: sticky;
+    top: 0%;
+}
+
+.maindiv {
+    position: relative;
+    z-index: 3000;
+}
+
+.vanish {
+    display: none;
+    position: absolute;
+    background-color: red;
+    z-index: 3000;
+}
+
+ul {
+    background-color: rgb(243, 243, 243);
+    list-style: none;
+    padding: 20px;
+    line-height: 3;
+    position: absolute;
+    border-radius: 10px;
+    right: 0;
+    z-index: 3000;
+}
+
+.vanish > ul {
+    list-style: none;
+    z-index: 3000;
+}
+
+.menudiv {
+    position: relative;
+    z-index: 3000;
+}
+
+.options {
+    z-index: 50000;
+}
+
+.vanish.open {
+   display: block;
+   background-color: rgb(217, 217, 217);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 3000;
+}
+
+@media screen and (max-width: 1040px){
+    nav {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 720px){
+     .middlelinks {
+        display: none;
+     }
+
+     .menu {
+        display: block;
+     }
+}
+

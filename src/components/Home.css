@@ -1,0 +1,256 @@
+.bannerdiv {
+    background-image: url('../assets/banner.jpg');
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.randombox {
+    background: white; /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 600px;
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+
+.randombox > h1 {
+    font-size: 39px;
+}
+
+.randombox > p {
+    font-weight: lighter;
+    padding-top: 40px;
+    line-height: 1.7;
+}
+
+span {
+    color: rgb(251, 184, 60);
+}
+
+.greydiv {
+    background-color: rgb(208, 208, 208);
+    padding-left: 180px;
+    padding-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shipping {
+    font-size: 28px;
+}
+
+.smallestgreydiv {
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+}
+
+.truck {
+    font-size: 55px;
+    color: rgb(110, 110, 110);
+}
+
+.truck:hover {
+    color: rgb(251, 184, 60);
+    transition: 0.3s;
+}
+
+.smallgreydiv {
+    display: flex;
+    align-items: center;
+}
+
+.popularProducts {
+    padding: 150px;
+    padding-left: 180px;
+    padding-right: 180px;
+    border-bottom: 1px solid black;
+}
+
+.popular {
+    font-weight: lighter;
+}
+
+.products {
+    font-weight: bold;
+}
+
+.us {
+    font-weight: bold;
+}
+
+.reviews {
+    font-weight: lighter;
+    padding-bottom: 40px;
+}
+
+.review-section {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+    padding: 150px;
+    padding-left: 180px;
+    padding-right: 180px;
+    /* border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9; */
+  }
+  
+  .review-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .review-section form div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .review-section form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .review-section form input,
+  .review-section form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .review-section form button {
+    padding: 10px;
+    background-color: rgb(251, 184, 60);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .review-section form button:hover {
+    background-color: rgba(251, 184, 60, 0.821);
+    transition: 0.3s;
+  }
+  
+  .review-section button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(251, 184, 60);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .review-section button:hover {
+    background-color: rgba(251, 184, 60, 0.789);
+  }
+  
+  .reviews-list {
+    margin-top: 20px;
+  }
+  
+  .review-item {
+    padding: 10px;
+    /* border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff; */
+    margin-bottom: 10px;
+  }
+  
+  .review-item h3 {
+    margin: 0 0 5px;
+  }
+  
+  .review-item p {
+    margin: 0;
+  }
+
+  .ticker {
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .ticker-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    animation: ticker 10s linear infinite;
+  }
+  
+  .ticker-content span {
+    padding: 10px;
+  }
+  
+  @keyframes ticker {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @media screen and (max-width: 980px){
+      .greydiv {
+        padding-left: 30px;
+      }
+  }
+
+  @media screen and (max-width: 860px){
+      .greydiv {
+        display: flex;
+        flex-direction: column;
+      }
+  }
+
+  @media screen and (max-width: 720px){
+      .popularProducts, .review-section {
+        padding: 80px;
+      }
+  }
+
+  @media screen and (max-width: 680px){
+      .randombox {
+        width: 500px;
+      }
+
+      .randombox > h1 {
+        font-size: 25px;
+      }
+
+      .randombox > p {
+           font-size: 13px;
+      }
+  }
+
+  @media screen and (max-width: 564px){
+      .randombox {
+        width: 400px;
+      }
+  }
+
+  @media screen and (max-width: 430px){
+      .randombox {
+          width: 300px;
+      }
+
+      .greydiv {
+        padding-right: 30px;
+      }
+  }

@@ -1,0 +1,66 @@
+.innercarddiv {
+    background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, #ffffff 0%, rgba(255, 255, 255, 0.6) 100%);
+    width: 100%;
+    backdrop-filter: blur(20px);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    height: 132px;
+    transition: 0.4s cubic-bezier(0.25, 1, 0.3, 1);
+    will-change: contents;
+    overflow: hidden;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.innercarddiv:hover {
+    height: 300px;
+}
+
+.hiddenlink {
+    color: black;
+    border: 2px solid black;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.4s;
+    width: 118px;
+}
+
+.hiddenlink:hover {
+    background-color: black;
+    color: white;
+}
+
+.financialservices {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: rgb(54, 54, 54);
+}
+
+.hiddencontent {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease, display 0.3s ease;
+}
+
+.iconstyle {
+    font-size: 50px;
+    fill: #a4c519;
+}
+
+.blurtext {
+   font-size: 25px;
+    color: rgb(251, 184, 60);
+    font-weight: bold;
+}
+
+.innercarddiv:hover .hiddencontent {
+    opacity: 1;
+    display: block;
+}
+
