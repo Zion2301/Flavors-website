@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Contact from './components/Contact'
 import About from './components/About'
 import Gallery from './components/Gallery' 
+import Contactpage from './components/Contactpage'
 function App() {
 
   const contactRef = useRef(null);
@@ -23,6 +24,7 @@ function App() {
                 <Route path='/' element={<Home/>}></Route>
                 <Route path='/about' element={<About/>}></Route>
                 <Route path='/gallery' element={<Gallery/>}></Route>
+                <Route path='/contact' element={<Contactpage/>}></Route>
             </Routes>
             <div ref={contactRef}>
             <Contact/>

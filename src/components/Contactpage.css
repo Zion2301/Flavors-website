@@ -1,0 +1,113 @@
+.about {
+    background-color: rgb(251, 184, 60);
+    border-bottom-right-radius: 250px;
+}
+
+.topcontactside {
+    padding: 100px;
+    width: 100%;
+    display: flex;
+    gap: 100px;
+
+}
+
+.leftdescribe {
+    padding: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.56);
+    width: 18%;
+    border-radius: 5px;
+}
+
+.logo {
+    width: 90px;
+}
+
+.eachhour {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+}
+
+.hourssection {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.phone {
+    display: flex;
+    gap: 23px;
+    align-items: center;
+}
+
+.thehead {
+    font-weight: bold;
+}
+
+.addresspart, .contactpart {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.proceed {
+    background-color: rgb(251, 184, 60);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.proceed:hover {
+    background-color: rgba(251, 184, 60, 0.704);
+    transition: 0.3s;
+}
+
+.location {
+    width: 70%;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 1200px){
+    .leftdescribe {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1077px){
+    .topcontactside {
+        flex-direction: column;
+    }
+
+    .location {
+        width: 100%;
+    }
+
+    .leftdescribe {
+        text-align: center;
+    }
+
+    .hourssection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .topcontactside {
+        padding: 30px;
+    }
+}
+
+
+

@@ -1,0 +1,142 @@
+
+.modalBackground{
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    background-color: rgba(200, 200, 200, 0.792);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    /* align-items: end; */
+    overflow-y: scroll;
+    left: 0px;
+    top: 0px;
+}
+.modalBackground::-webkit-scrollbar{
+    height: 1px;
+}
+.modal{
+    background-color: white;
+    border-radius: 20px;
+    /* box-shadow: 3px 5px 5px; */
+    box-shadow: 8px 8px 20px  gray;
+    width: 80%;
+    height: 600px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+   
+}
+.modalBody{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.closeBtn{
+    width: 40px;
+    height: 40px;
+    background-color: crimson;
+    color: white;
+    border: 0;
+    font-size: 25px;
+    border-radius: 10px;
+}
+.productImgBox{
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+}
+.productImg{
+    width: 100%;
+    height: 80%;
+    /* border: 2px solid crimson; */
+    display: flex;
+    gap: 3%;
+}
+.shareLinks{
+    width: 100%;
+    /* border: 3px solid cadetblue; */
+    display: flex;
+    gap: 5%;
+}
+.shareLinks > p{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+.shareLinks > i{
+    font-size: 25px;
+}
+.shareLinks > i:hover{
+    transition: 1s;
+    color: coral;
+}
+.productInfo{
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid cadetblue; */
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    padding-left: 30px;
+}
+.productInfo > h1{
+    font-size: 25px;
+}
+#info, #price{
+    font-size: 14px;
+}
+#price{
+    font-size: 24px;
+    color: coral;
+    font-family: "Modern Antiqua", serif;
+}
+.mainImg{
+    width: 70%;
+    height: 92%;
+    /* border: 2px solid coral; */
+}
+.mainImg > img{
+    width: 100%;
+    height: 100%;
+}
+.otherImg{
+    width: 30%;
+    height: 90%;
+    /* border: 2px solid crimson; */
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+}
+.sampleImg{
+    width: 100%;
+    height: 25%;
+    /* border: 3px solid brown; */
+}
+.cartBtn{
+    width: 150px;
+    height: 40px;
+    background-color: coral;
+    color: white;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.cartBtn:hover{
+    background-color: gray;
+    color: white;
+    transition: 2s;
+}
+.inStock{
+    color: green;
+}
+.outOfStock{
+    color: red;
+}

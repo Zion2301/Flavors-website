@@ -2,103 +2,45 @@
     background-color: #505f74;
     padding: 60px;
     color: white;
-    text-align: center;
     margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.talk {
-    font-size: 60px;
-    margin-bottom: 30px;
+.social {
+    font-size: 40px;
 }
 
-.email {
-    font-size: 30px;
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tinyhead {
     font-weight: bold;
 }
 
-.theemail {
-    font-size: 25px;
-}
-
-.box {
-    width: 50%;
-}
-
-.eachcontact {
+.address {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
+    flex-direction: column;
+    gap: 3px;
 }
 
-.info {
-    font-size: 50px;
-    margin-bottom: 30px;
+@media screen and (max-width: 860px){
+    .address {
+        display: none;
+    }
 }
 
-.bottomlogo {
-    width: 200px;
-}
 
-.leftside {
-    width: 50%;
-    text-align: left;
-    border-right: 2px solid white;
-    padding: 30px;
-}
-
-.rightside {
-    width: 50%;
-}
-
-.totalsides {
-    display: flex;
-    align-items: center;
-    margin-bottom: 100px;
-    justify-content: space-between;
-}
-
-.describe {
-    line-height: 1.6;
-    font-size: 20px;
-}
-
-@media screen and (max-width: 1200px){
-      .leftside, .rightside {
-        width: 100%;
-      }
-
-      .totalsides {
-        display: flex;
+@media screen and (max-width: 530px){
+    .contactbox {
         flex-direction: column;
-      }
-
-      .leftside {
-        border: none;
-        border-bottom: 2px solid white;
-      }
-}
-
-@media screen and (max-width: 580px){
-    .eachcontact {
-        display: flex;
-        flex-direction: column;
-        margin-top: 60px;
+        gap: 20px;
     }
 }
 
-@media screen and (max-width: 455px){
-    .talk, .info  {
-        font-size: 40px;
-    }
 
-    .describe {
-        font-size: 13px;
-    }
-
-    .theemail {
-        font-size: 20px;
-    }
-}
 
