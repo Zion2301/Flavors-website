@@ -14,7 +14,8 @@ const Hovercard = (props) => {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
-        color: '#000'
+        color: '#000',
+        borderRadius: '5px'
     }
   return (
       <>
