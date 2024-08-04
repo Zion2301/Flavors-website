@@ -17,7 +17,12 @@ import Spice7 from '../assets/cloves.jpg';
 import Spice8 from '../assets/pepper.webp';
 
 const Home = () => {
-  const [reviews, setReviews] = useState([]);
+  const getreviewsfromlocal = () => {
+    const saved = localStorage.getItem('reviews');
+    return saved ? JSON.parse(saved) : [];
+  }
+
+  const [reviews, setReviews] = useState(getreviewsfromlocal());
   const [name, setName] = useState('');
   const [review, setReview] = useState('');
   const [showForm, setShowForm] = useState(false);
@@ -66,6 +71,15 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    savereviews(reviews);
+  }, [reviews]);
+
+  const savereviews = (reviews) => {
+     localStorage.setItem('reviews', JSON.stringify(reviews));
+  };
+  
+
   return (
     <>
       <div className="bannerdiv">
@@ -104,23 +118,7 @@ const Home = () => {
       <div className="popularProducts">
         <h1 className='popular'>Best-<span className='products'>Sellers</span></h1>
         <div className="productCards">
-          {products.map((product, index) => (
-            <Product 
-              key={index}
-              imgmain={product.img}
-              img = {product.img}
-              name={product.name}
-              price={product.price}
-              icon={[
-                <FaStar className='goldStar' key={1}/>,
-                <FaStar className='goldStar' key={2}/>,
-                <FaStar className='goldStar' key={3}/>,
-                <FaStar className='goldStar' key={4}/>
-              ]}
-              info={product.info}
-              status={product.status}
-            />
-          ))}
+         
         </div>
 
         <div className="popularProducts">
