@@ -27,7 +27,7 @@ const Home = () => {
   const [review, setReview] = useState('');
   const [showForm, setShowForm] = useState(false);
   const [datetime, setDatetime] = useState(new Date().toLocaleString());
-  const location = '123 Elm Street, Springfield, SP 12345, United Kingdom';
+  const [location, setLocation] = useState('');
 
   const products = [
     { img: Spice1, name: 'Paprika', price: "$3.24", info: "Paprika is a ground spice made from dried red fruits of the larger and sweeter varieties of the plant Capsicum annuum.", status: "In Stock" },
@@ -78,7 +78,22 @@ const Home = () => {
   const savereviews = (reviews) => {
      localStorage.setItem('reviews', JSON.stringify(reviews));
   };
-  
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setLocation(`Lat: ${latitude.toFixed(2)}, Lon: ${longitude.toFixed(2)}`);
+        },
+        (error) => {
+          setLocation('Geolocation not available');
+        }
+      );
+    } else {
+      setLocation('Geolocation not supported');
+    }
+  }, []);
 
   return (
     <>
@@ -118,13 +133,13 @@ const Home = () => {
       <div className="popularProducts">
         <h1 className='popular'>Best-<span className='products'>Sellers</span></h1>
         <div className="productCards">
-         
+          {/* Add product cards here */}
         </div>
 
         <div className="popularProducts">
           <h1 className='popular'>New<span className='products'> Arrivals</span></h1>
           <div className="productCards">
-           
+            {/* Add product cards here */}
           </div>
       </div>
 
