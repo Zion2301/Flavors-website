@@ -1,8 +1,10 @@
 import { useState } from "react"
 import "./Product.css"
 import Modal from '../Modal/Modal'
-import paprika from '../../assets/paprika.jpg'
+// import Paprika from './paprika.avif'
+// import Spice from './spice.jpg'
 import { FaArrowRight } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 
 const Product = (props) => {
@@ -11,17 +13,17 @@ const Product = (props) => {
 
   return (
     <>
-       <div className="productBox">
         <div className="Block">
           <div className="productImage">
+            
             <img src={props.img} alt="" />
           </div>
 
           <div className="productTxt">
 
-            <blockquote><b>{props.name}</b></blockquote>
+            <h1><b>{props.name}</b></h1>
             <p id="price"><b>{props.price}</b></p>
-            <i>{props.icon}</i>
+            <i>{[props.icon]}</i>
 
             <button 
               className="openModalBtn" 
@@ -32,21 +34,23 @@ const Product = (props) => {
 
             {openModal &&
               <Modal  
-                closeModal={setOpenModal}
-                imgmain={props.img} 
+                closeModal={setOpenModal}  
                 mainImg={props.mainImg} 
-                img1={props.img}
-                img2={props.img}
-                img3={props.img}
-                img4={props.img}
+                img1={props.img1}
+                img2={props.img2}
+                img3={props.img3}
+                img4={props.img4}
                 name={props.name}
                 price={props.price}
+                icon = {[props.icon]}
                 info={props.info}
                 status={props.status}
-            />}
+              />
+              
+            }
+            
           </div>
         </div>
-       </div>
     </>
   )
 }

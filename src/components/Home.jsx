@@ -3,18 +3,7 @@ import { useState, useEffect } from 'react';
 import { FiTruck } from "react-icons/fi";
 import { FaRegCreditCard } from "react-icons/fa";
 import { MdOutlineHeadsetMic } from "react-icons/md";
-import { FaStar } from "react-icons/fa";
-import Product from './Product/Product';
-
-// Import images for products
-import Spice1 from '../assets/paprika.jpg';
-import Spice2 from '../assets/cinnamon.jpg';
-import Spice3 from '../assets/turmeric.jpg';
-import Spice4 from '../assets/coriander.webp';
-import Spice5 from '../assets/ginger.webp';
-import Spice6 from '../assets/nutmeg.webp';
-import Spice7 from '../assets/cloves.jpg';
-import Spice8 from '../assets/pepper.webp';
+import ProductList from './productlist/ProductList';
 
 const Home = () => {
   const getreviewsfromlocal = () => {
@@ -29,16 +18,6 @@ const Home = () => {
   const [datetime, setDatetime] = useState(new Date().toLocaleString());
   const [location, setLocation] = useState('');
 
-  const products = [
-    { img: Spice1, name: 'Paprika', price: "$3.24", info: "Paprika is a ground spice made from dried red fruits of the larger and sweeter varieties of the plant Capsicum annuum.", status: "In Stock" },
-    { img: Spice2, name: 'Cinnamon', price: "$2.50", info: "Cinnamon is a spice obtained from the inner bark of several tree species from the genus Cinnamomum.", status: "In Stock" },
-    { img: Spice3, name: 'Turmeric', price: "$4.00", info: "Turmeric is a spice that comes from the turmeric plant. It is commonly used in Asian food.", status: "In Stock" },
-    { img: Spice4, name: 'Coriander', price: "$1.80", info: "Coriander is an herb that’s commonly used to flavor international dishes.", status: "In Stock" },
-    { img: Spice5, name: 'Ginger', price: "$2.75", info: "Ginger is a flowering plant whose rhizome, ginger root or ginger, is widely used as a spice.", status: "In Stock" },
-    { img: Spice6, name: 'Nutmeg', price: "$3.50", info: "Nutmeg is the seed or ground spice of several species of the genus Myristica.", status: "In Stock" },
-    { img: Spice7, name: 'Cloves', price: "$4.20", info: "Cloves are the aromatic flower buds of a tree in the family Myrtaceae, Syzygium aromaticum.", status: "In Stock" },
-    { img: Spice8, name: 'Pepper', price: "$2.00", info: "Black pepper is a flowering vine cultivated for its fruit, known as a peppercorn, which is usually dried and used as a spice and seasoning.", status: "In Stock" },
-  ];
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -133,23 +112,22 @@ const Home = () => {
       <div className="popularProducts">
         <h1 className='popular'>Best-<span className='products'>Sellers</span></h1>
         <div className="productCards">
-          {/* Add product cards here */}
+           <ProductList/>
+        </div>
         </div>
 
         <div className="popularProducts">
           <h1 className='popular'>New<span className='products'> Arrivals</span></h1>
           <div className="productCards">
-            {/* Add product cards here */}
+          <ProductList/>
           </div>
-      </div>
+        </div>
 
       <div className="popularProducts">
           <h1 className='popular'>Hot<span className='products'> Deals</span></h1>
           <div className="productdiv">
-              {/* Add content here */}
+          <ProductList/>
           </div>
-      </div>
-
       </div>
 
       <div className="review-section">

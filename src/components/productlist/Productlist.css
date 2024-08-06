@@ -1,0 +1,30 @@
+.productBox {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 60px;
+   margin-top: 40px;
+}
+
+@media screen and (max-width: 1315px){
+    .productBox {
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width: 1223px){
+      .productBox {
+        grid-template-columns: repeat(3, 1fr);
+      }
+}
+
+@media screen and (max-width: 945px){
+      .productBox {
+        grid-template-columns: repeat(2, 1fr);
+      }
+}
+
+@media screen and (max-width: 635px){
+    .productBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
