@@ -216,6 +216,10 @@ span {
   .ticker-content span {
     padding: 10px;
   }
+
+  .manystars {
+    display: flex;
+  }
   
   @keyframes ticker {
     0% {

@@ -163,8 +163,18 @@ const Home = () => {
         <div className="reviews-list">
           {reviews.map((rev, index) => (
             <div key={index} className="review-item">
+              <div className="manystars">
+                <p>⭐</p>
+                <p>⭐</p>
+                <p>⭐</p>
+                <p>⭐</p>
+                <p>⭐</p>
+              </div>
+              <div className="reviewend">
+                  <p>2 days ago</p>
+              </div>
               <h2>{rev.review}</h2>
-              <p>{rev.name}</p>
+              <p>- {rev.name}</p>
             </div>
           ))}
         </div>
