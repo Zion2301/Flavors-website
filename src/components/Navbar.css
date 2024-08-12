@@ -54,6 +54,7 @@ nav {
 
 ul {
     background-color: rgb(243, 243, 243);
+    width: 200px;
     list-style: none;
     padding: 20px;
     line-height: 3;
