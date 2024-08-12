@@ -40,6 +40,12 @@
     padding-bottom: 20px;
 }
 
+@media screen and (max-width: 1855px){
+    .largebox {
+        margin-bottom: 660px;
+    }
+}
+
 @media screen and (max-width: 1200px){
      .largebox {
         margin-bottom: 660px;
