@@ -1,4 +1,7 @@
 import './Home.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from 'react-slick';
 import { useState, useEffect } from 'react';
 import { FiTruck } from "react-icons/fi";
 import { FaRegCreditCard } from "react-icons/fa";
@@ -17,7 +20,6 @@ const Home = () => {
   const [showForm, setShowForm] = useState(false);
   const [datetime, setDatetime] = useState(new Date().toLocaleString());
   const [location, setLocation] = useState('');
-
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -55,7 +57,7 @@ const Home = () => {
   }, [reviews]);
 
   const savereviews = (reviews) => {
-     localStorage.setItem('reviews', JSON.stringify(reviews));
+    localStorage.setItem('reviews', JSON.stringify(reviews));
   };
 
   useEffect(() => {
@@ -73,6 +75,16 @@ const Home = () => {
       setLocation('Geolocation not supported');
     }
   }, []);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipeToSlide: true,
+    arrows: true,
+  };
 
   return (
     <>
@@ -114,14 +126,14 @@ const Home = () => {
         <div className="productCards">
            <ProductList/>
         </div>
-        </div>
+      </div>
 
-        <div className="popularProducts">
+      <div className="popularProducts">
           <h1 className='popular'>New<span className='products'> Arrivals</span></h1>
           <div className="productCards">
           <ProductList/>
           </div>
-        </div>
+      </div>
 
       <div className="popularProducts">
           <h1 className='popular'>Hot<span className='products'> Deals</span></h1>
@@ -132,7 +144,7 @@ const Home = () => {
 
       <div className="review-section">
         <h1 className='reviews'>Hear what people say about <span className='us'>Us!</span></h1>
-        <button onClick={toggleForm}>
+        <button onClick={toggleForm} className='revbutton'>
           {showForm ? 'Close Form' : 'Add a Review'}
         </button>
         {showForm && (
@@ -160,7 +172,7 @@ const Home = () => {
           </form>
         )}
 
-        <div className="reviews-list">
+        <Slider {...settings} className="reviews-list">
           {reviews.map((rev, index) => (
             <div key={index} className="review-item">
               <div className="manystars">
@@ -173,11 +185,13 @@ const Home = () => {
               <div className="reviewend">
                   <p>2 days ago</p>
               </div>
+              <div className="bebigger">
               <h2>{rev.review}</h2>
               <p>- {rev.name}</p>
+              </div>
             </div>
           ))}
-        </div>
+        </Slider>
       </div>
 
       <div className="ticker">

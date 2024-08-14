@@ -125,6 +125,10 @@
     }
   }
 
+  @media screen and (max-width: ){
+    
+  }
+
   @media screen and (max-width: 1075px){
        .modal {
         max-width: 50%;
@@ -136,3 +140,4 @@
         max-width: 70%;
        }
   }
+

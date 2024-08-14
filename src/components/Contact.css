@@ -1,11 +1,13 @@
 .contactbox {
-    background-color: #505f74;
     padding: 60px;
-    color: white;
+    color: black;
     margin-top: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgb(241, 241, 241);
+    position: sticky;
+    bottom: 0%;
 }
 
 .social {

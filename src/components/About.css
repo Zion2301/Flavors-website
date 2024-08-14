@@ -24,10 +24,12 @@
     box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.56);
     padding: 30px;
     width: 50%;
+    z-index: 3000;
+    background-color: white;
 }
 
 .largebox {
-    margin-bottom: 410px;
+    margin-bottom: 560px;
 }
 
 .who {
@@ -36,8 +38,9 @@
 }
 
 .box > p {
-    line-height: 1.7;
+    line-height: 2.0;
     padding-bottom: 20px;
+    font-size: 17px;
 }
 
 @media screen and (max-width: 1855px){
